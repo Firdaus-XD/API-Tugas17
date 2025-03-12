@@ -1,0 +1,77 @@
+/* Gunakan font modern */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 20px;
+    margin: 0;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#buku {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2575fc;
+}
+
+p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #eef2ff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.05);
+    background: #d0e1fd;
+}
+
+strong {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    #buku {
+        padding: 15px;
+    }
+}
