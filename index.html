@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buku Fiksi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Daftar Buku Fiksi</h1>
+    <div id="buku"></div>
+
+    <script>
+        fetch('http://127.0.0.1:5000/api/data')
+            .then(response => response.json())
+            .then(data => {
+                let html = '<h2>' + data.tema + '</h2>';
+                html += '<p>' + data.deskripsi + '</p>';
+                html += '<ul>';
+                data.buku.forEach(buku => {
+                    html += '<li><strong>' + buku.judul + '</strong><br>';
+                    html += 'Penulis: ' + buku.penulis + '</li>';
+                });
+                html += '</ul>';
+                document.getElementById('buku').innerHTML = html;
+            });
+    </script>
+</body>
+</html>
